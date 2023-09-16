@@ -1,0 +1,176 @@
+/* ==========================================================================
+   Portfolio Single page style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-single-holder {
+	@include mkdfRelativeHolderLayout();
+	margin: 0 0 50px;
+	
+    .mkdf-ps-image-holder {
+	    @include mkdfRelativeHolderLayout();
+	    
+	    .mkdf-ps-image {
+		    @include mkdfRelativeHolderLayout();
+		    box-sizing: border-box;
+		    
+		    a, img {
+			    position: relative;
+			    display: block;
+		    }
+	    }
+    }
+
+	.mkdf-ps-content-item {
+		p{
+			margin: 0;
+		}
+	}
+	
+	.mkdf-ps-info-holder {
+		@include mkdfRelativeHolderLayout();
+		
+		.mkdf-ps-info-item {
+			@include mkdfRelativeHolderLayout();
+			margin: 0 0 10px;
+
+			h6{
+				margin: 0;
+			}
+			p, a {
+				display: inline-block;
+				vertical-align: baseline;
+				margin: 0;
+			}
+		}
+		
+		.mkdf-ps-info-title {
+			display: inline-block;
+			vertical-align: baseline;
+			margin: 0;
+			color: $default-heading-color;
+			font-weight: 500;
+			font-size: 12px;
+		}
+
+		.mkdf-ps-info-content{
+			color: #8b8b8b;
+			font-size: 12px;
+			font-weight: 500;
+		}
+
+		a.mkdf-ps-info-content:hover{
+			color: $first-main-color;
+		}
+	}
+}
+
+/* ==========================================================================
+   Portfolio Single page style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio Single page specific style for types - begin
+   ========================================================================== */
+
+.mkdf-portfolio-single-holder {
+	
+	.mkdf-ps-image-holder {
+		
+		&.mkdf-ps-gallery-images {
+			
+			/***** Columns Layout - begin *****/
+			
+			$columns_number: ('two', 'three', 'four');
+			
+			@for $i from 0 to length($columns_number) {
+				&.mkdf-ps-#{nth($columns_number,$i+1)}-columns {
+					
+					.mkdf-ps-image {
+						width: 100% / ($i+2);
+					}
+					
+					@if ($i > 1) { // set different break point for four columns
+						@media only screen and (min-width: $laptop-landscape-plus-pixel) {
+							
+							.mkdf-ps-image {
+								
+								&:nth-child(#{$i+2}n+1) {
+									clear: both;
+								}
+							}
+						}
+					} @else {
+						@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+							
+							.mkdf-ps-image {
+								
+								&:nth-child(#{$i+2}n+1) {
+									clear: both;
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			/***** Columns Layout - end *****/
+		}
+		
+		&.mkdf-ps-masonry-images {
+			
+			.mkdf-ps-image,
+			.mkdf-ps-grid-sizer {
+				width: 25%;
+			}
+			
+			.mkdf-ps-grid-gutter {
+				width: 0;
+			}
+			
+			.mkdf-ps-image {
+				
+				a {
+					height: 100%;
+				}
+
+				&.mkdf-ps-fixed-masonry{
+					img{
+						height: 100%;
+					}
+				}
+			}
+
+			.mkdf-masonry-size-large-width {
+				
+				img {
+					width: 100%;
+				}
+			}
+			
+			/***** Columns Layout - begin *****/
+			
+			$columns_number: ('two', 'three', 'four');
+			
+			@for $i from 0 to length($columns_number) {
+				&.mkdf-ps-#{nth($columns_number,$i+1)}-columns {
+					$column_width: 100%/($i+2);
+					
+					.mkdf-ps-image,
+					.mkdf-ps-grid-sizer {
+						width: $column_width;
+					}
+
+					.mkdf-ps-image.mkdf-masonry-size-large-width,
+					.mkdf-ps-image.mkdf-masonry-size-large-width-height {
+						width: $column_width * 2;
+					}
+				}
+			}
+			
+			/***** Columns Layout - end *****/
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single page specific style for types - end
+   ========================================================================== */

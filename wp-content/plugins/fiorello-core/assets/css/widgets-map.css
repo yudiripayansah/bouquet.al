@@ -1,0 +1,389 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+/* ==========================================================================
+   Shortcodes styles
+   ========================================================================== */
+/* ==========================================================================
+   Author Info widget style - begin
+   ========================================================================== */
+aside.mkdf-sidebar .mkdf-author-info-widget {
+  padding: 30px 0;
+}
+
+.widget.mkdf-author-info-widget {
+  border: 1px solid #f34f3f;
+  padding: 30px 0;
+  text-align: center;
+  color: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+.widget.mkdf-author-info-widget .mkdf-aiw-inner ul li {
+  display: inline-block;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+.widget.mkdf-author-info-widget .mkdf-aiw-inner ul li:last-child {
+  margin-right: 0;
+}
+
+.widget.mkdf-author-info-widget .mkdf-aiw-inner ul a {
+  font-size: 15px;
+}
+
+.widget.mkdf-author-info-widget .mkdf-aiw-title {
+  margin: 0;
+  line-height: 1.1em;
+  letter-spacing: 0.1em;
+}
+
+.widget.mkdf-author-info-widget .mkdf-aiw-image {
+  display: inline-block;
+}
+
+.widget.mkdf-author-info-widget .mkdf-aiw-image img {
+  border-radius: 100%;
+}
+
+.widget.mkdf-author-info-widget .mkdf-aiw-text {
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #f34f3f;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.widget.mkdf-author-info-widget .mkdf-aiw-text p {
+  margin: 0 0 14px 0;
+}
+
+/* ==========================================================================
+   Author Info widget style - end
+   ========================================================================== */
+/* ==========================================================================
+   Blog List widget style - begin
+   ========================================================================== */
+.widget.mkdf-blog-list-widget {
+  margin: 0 0 20px;
+}
+
+.widget.mkdf-blog-list-widget > h4 {
+  margin: 0 0 15px;
+}
+
+footer .mkdf-footer-top .widget.mkdf-blog-list-widget > h2,
+.mkdf-top-bar .widget.mkdf-blog-list-widget > h2 {
+  margin: 0 0 8px;
+}
+
+/* ==========================================================================
+   Blog List widget style - end
+   ========================================================================== */
+/* ==========================================================================
+   Icon widget style - begin
+   ========================================================================== */
+.mkdf-icon-widget-holder {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.mkdf-icon-widget-holder > * {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+.mkdf-icon-widget-holder .mkdf-icon-text {
+  padding: 0 0 0 10px;
+}
+
+.mkdf-icon-widget-holder .mkdf-icon-text.mkdf-no-icon {
+  padding: 0;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-icon-widget-holder {
+  color: #333 !important;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-icon-widget-holder:hover {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-icon-widget-holder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-icon-widget-holder:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ==========================================================================
+   Icon widget style - end
+   ========================================================================== */
+/* ==========================================================================
+   Image Slider widget style - begin
+   ========================================================================== */
+.widget.mkdf-image-gallery-widget {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.widget.mkdf-image-gallery-widget .mkdf-is-widget-inner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.widget.mkdf-image-gallery-widget .mkdf-widget-title {
+  margin: 0 0 32px;
+}
+
+.widget.mkdf-image-gallery-widget img {
+  display: block;
+}
+
+/* ==========================================================================
+   Image Slider widget style - end
+   ========================================================================== */
+.widget.mkdf-search-post-type-widget {
+  line-height: 0;
+  position: relative;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-search-post-type {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-post-type-search-results {
+  background: #fff;
+  height: auto;
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  top: 100%;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-post-type-search-results ul {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 0;
+  width: 100%;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-post-type-search-results ul li {
+  display: inline-block;
+  width: 100%;
+  line-height: 1.5em;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-search-icon,
+.widget.mkdf-search-post-type-widget .mkdf-search-loading {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -9px;
+  font-size: 15px;
+  color: #b5b5b5;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  opacity: 1;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-search-icon.mkdf-hidden,
+.widget.mkdf-search-post-type-widget .mkdf-search-loading.mkdf-hidden {
+  opacity: 0;
+}
+
+.wpb_widgetised_column .widget.mkdf-search-post-type-widget .mkdf-search-post-type {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.wpb_widgetised_column .widget.mkdf-search-post-type-widget .mkdf-post-type-search-field {
+  border-radius: 0;
+  height: 57px;
+  line-height: calc(57px - 2px);
+  border: 0;
+  font-size: 15px;
+  color: #878787;
+}
+
+.wpb_widgetised_column .widget.mkdf-search-post-type-widget .mkdf-post-type-search-results {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #dadada;
+}
+
+.wpb_widgetised_column .widget.mkdf-search-post-type-widget .mkdf-post-type-search-results ul {
+  padding: 16px 20px;
+}
+
+.widget.mkdf-separator-widget {
+  margin: 0 !important;
+  /* overwrite default widget margin */
+}
+
+/* ==========================================================================
+   Social Icon widget style - begin
+   ========================================================================== */
+.mkdf-social-icon-widget-holder {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.mkdf-social-icon-widget-holder .mkdf-social-icon-widget {
+  color: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder {
+  color: #333 !important;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder:hover {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ==========================================================================
+   Social Icon widget style - end
+   ========================================================================== */
+/* ==========================================================================
+   Social Icons Group widget style - begin
+   ========================================================================== */
+.mkdf-social-icons-group-widget.mkdf-square-icons .mkdf-social-icon-widget-holder {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin: 0 7px;
+  font-size: 17px;
+  color: #fff;
+  background-color: #2b2b2b;
+}
+
+.mkdf-social-icons-group-widget.mkdf-square-icons .mkdf-social-icon-widget-holder:hover {
+  color: #2b2b2b;
+  background-color: #f34f3f;
+}
+
+.mkdf-social-icons-group-widget.mkdf-square-icons .mkdf-social-icon-widget-holder .mkdf-social-icon-widget {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.mkdf-social-icons-group-widget.mkdf-square-icons.mkdf-light-skin .mkdf-social-icon-widget-holder {
+  color: #2b2b2b;
+  background-color: #fff;
+}
+
+.mkdf-social-icons-group-widget.mkdf-square-icons.mkdf-light-skin .mkdf-social-icon-widget-holder:hover {
+  color: #2b2b2b;
+  background-color: #f34f3f;
+}
+
+.mkdf-social-icons-group-widget .mkdf-social-icon-widget-holder {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+  text-align: center;
+}
+
+.mkdf-social-icons-group-widget .mkdf-social-icon-widget-holder:first-child {
+  margin-left: 0;
+}
+
+.mkdf-social-icons-group-widget .mkdf-social-icon-widget-holder:last-child {
+  margin-right: 0;
+}
+
+/* ==========================================================================
+   Social Icons Group widget style - end
+   ========================================================================== */
+/* ==========================================================================
+   Sticky Sidebar widget start styles
+   ========================================================================== */
+.mkdf-widget-sticky-sidebar {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* ==========================================================================
+   Sticky Sidebar widget end styles
+   ========================================================================== */
+.widget.mkdf-vertical-separator-widget {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 !important;
+  /* overwrite default widget margin */
+  font-size: 0;
+}
+
+.widget.mkdf-vertical-separator-widget.mkdf-vertical-separator-full-height {
+  height: 100%;
+}
+
+.widget.mkdf-vertical-separator-widget .mkdf-vsw-height-holder {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.widget.mkdf-vertical-separator-widget .mkdf-vsw {
+  display: inline-block;
+  vertical-align: middle;
+  border-left: 1px solid currentColor;
+  height: 20px;
+  width: 1px;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=../../../../plugins/fiorello-core/assets/css/widgets-map.css.map */

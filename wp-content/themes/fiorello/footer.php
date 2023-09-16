@@ -1,0 +1,1 @@
+<?php do_action( 'fiorello_mikado_get_footer_template' );

@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Testimonials boxed style - begin
+   ========================================================================== */
+
+.mkdf-testimonials-holder {
+
+	&.mkdf-testimonials-boxed {
+		padding: 60px 40px;
+		margin: 0 -20px;
+
+		.mkdf-testimonials {
+			margin: 0;
+		}
+
+		.owl-item {
+			padding: 0 20px;
+			box-sizing: border-box;
+		}
+
+		.mkdf-testimonial-content {
+			padding: 40px 70px 77px;
+			background-color: #fbfbfb;
+			box-sizing: border-box;
+			text-align: center;
+		}
+
+		.mkdf-testimonials-author-holder {
+			@include mkdfRelativeHolderLayout();
+			margin: 0;
+
+			.mkdf-testimonial-image {
+				float: left;
+			}
+
+		}
+		.mkdf-testimonial-image {
+			img {
+				margin: 0 auto 15px;
+			}
+		}
+		.mkdf-testimonials-icon {
+			display: block;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		.mkdf-testimonial-text {
+			margin: 3% 0 0;
+		}
+	}
+}
+
+/* ==========================================================================
+   Testimonials boxed style - end
+   ========================================================================== */
+

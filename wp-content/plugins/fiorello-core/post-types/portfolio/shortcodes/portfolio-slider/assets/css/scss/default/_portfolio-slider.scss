@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Portfolio Slider shortcode style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-slider-holder {
+    @include mkdfRelativeHolderLayout();
+
+	.mkdf-pl-inner {
+		margin: 0 !important;
+	}
+	
+	article {
+		width: auto !important;
+		padding: 0 !important;
+		margin: 0 !important;
+		float: none !important;
+	}
+
+	.mkdf-portfolio-list-holder {
+
+		&.mkdf-nav-light-skin {
+
+			.owl-nav {
+
+				.owl-prev,
+				.owl-next {
+					color: $header-light-color;
+					
+					&:hover {
+						color: $header-light-hover-color;
+					}
+				}
+			}
+		}
+
+		&.mkdf-nav-dark-skin {
+
+			.owl-nav {
+
+				.owl-prev,
+				.owl-next {
+					color: $header-dark-color;
+					
+					&:hover {
+						color: $header-dark-hover-color;
+					}
+				}
+			}
+		}
+
+		&.mkdf-pag-light-skin {
+
+			.owl-dots {
+
+				.owl-dot {
+
+					.owl-dot-num {
+						color: $header-light-color;
+
+						&.active,
+						&:hover {
+							color: $header-light-hover-color;
+						}
+					}
+
+					span {
+						background-color: rgba($header-light-color, .2);
+					}
+
+					&.active,
+					&:hover {
+
+						span {
+							background-color: $header-light-hover-color;
+						}
+					}
+				}
+			}
+		}
+
+		&.mkdf-pag-dark-skin {
+
+			.owl-dots {
+
+				.owl-dot {
+
+					.owl-dot-num {
+						color: $header-dark-color;
+
+						&.active,
+						&:hover {
+							color: $header-dark-hover-color;
+						}
+					}
+
+					span {
+						background-color: rgba($header-dark-color, .2);
+					}
+
+					&.active,
+					&:hover {
+
+						span {
+							background-color: $header-dark-hover-color;
+						}
+					}
+				}
+			}
+		}
+
+		&.mkdf-pag-on-slider {
+
+			.owl-nav {
+
+				.owl-prev,
+				.owl-next {
+					@include mkdfTransform(translateY(-50%));
+				}
+			}
+
+			.owl-dots {
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+	&.mkdf-ps-fullscreen {
+		height: 100%;
+
+		article,
+		.mkdf-pl-item-inner,
+		.mkdf-pli-image {
+			height: 100%;
+		}
+
+		article {
+			width: 100% !important;
+		}
+
+		.mkdf-pli-image img {
+			height: 100%;
+			object-fit: cover
+		}
+
+		.mkdf-owl-slider {
+			&.mkdf-slider-has-both-nav {
+				.owl-nav {
+					position: absolute;
+					top: 0;
+					width: 100%;
+					height: 100%;
+
+					.owl-prev,
+					.owl-next {
+						@include mkdfTransform(translateY(-50%));
+					}
+				}
+			}
+
+			.owl-dots{
+				padding: 66px 0 58px;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Slider shortcode style - end
+   ========================================================================== */

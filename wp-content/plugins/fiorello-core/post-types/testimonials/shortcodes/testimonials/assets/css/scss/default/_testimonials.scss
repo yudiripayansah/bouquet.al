@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Testimonials shortcode style - begin
+   ========================================================================== */
+
+.mkdf-testimonials-holder {
+	box-sizing: border-box;
+	@include mkdfRelativeHolderLayout();
+
+	.mkdf-testimonials,
+	.mkdf-testimonial-content,
+	.mkdf-testimonial-text-holder {
+		@include mkdfRelativeHolderLayout();
+	}
+
+	.mkdf-testimonials {
+		box-sizing: border-box;
+
+		.mkdf-testimonial-author {
+			display: block;
+			margin: 38px 0 0;
+			font-size: 15px;
+			color: $default-heading-color;
+			text-transform: uppercase;
+			font-weight: 500;
+
+			.mkdf-testimonials-author-name {
+				display: block;
+				@include mkdfH6Style();
+			}
+
+			.mkdf-testimonials-author-job {
+				display: block;
+				font-size: 12px;
+			    letter-spacing: 0;
+			    line-height: 24px;
+			    text-transform: none;
+				color: $meta-color;
+
+			}
+		}
+
+		.mkdf-testimonial-text {
+			color: #4b4747;
+			font-family: $default-text-font;
+			font-style: italic;
+			font-size: 24px;
+			line-height: 1.5em;
+		}
+
+		&[data-enable-navigation="yes"]{
+			padding: 0 100px;
+
+			.owl-nav {
+				.owl-prev{
+					left: 0px;
+				}
+
+				.owl-next{
+					right: 0px;
+				}
+				@include ipad-landscape{
+					display: none;
+				}
+			}
+
+			@include phone-landscape{
+				padding: 0;
+			}
+		}
+	}
+
+	.mkdf-testimonial-image {
+		margin-top: 35px;
+		img {
+			width: auto !important;
+			border-radius: 5em;
+		}
+	}
+
+	.mkdf-testimonial-quote-image{
+		color: $first-main-color;
+	}
+
+	/* Light/Dark styles */
+	&.mkdf-testimonials-light {
+
+		.mkdf-testimonial-title,
+		.mkdf-testimonial-text {
+			color: #fff;
+		}
+		.mkdf-testimonial-author {
+			.mkdf-testimonials-author-name,
+			.mkdf-testimonials-author-job {
+				color: #fff;
+			}
+		}
+		
+		.owl-nav {
+			.owl-prev,
+			.owl-next {
+				color: #fff;
+			}
+		}
+		.owl-dots {
+
+			.owl-dot {
+
+				span {
+					border: 2px solid rgba(#fff, .5);
+				}
+
+				&:hover,
+				&.active {
+
+					span {
+						background-color: #fff;
+						border-color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Testimonials shortcode style - end
+   ========================================================================== */

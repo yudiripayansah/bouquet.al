@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Portfolio Slider shortcode style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-slider-holder {
+
+	&.mkdf-ps-fullscreen {
+		@media only screen and (max-width: $laptop-landscape-large) and (min-width: $ipad-portrait-plus-pixel) {
+			.mkdf-owl-slider {
+				.owl-dots {
+					padding: 20px 0;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Slider shortcode style - end
+   ========================================================================== */

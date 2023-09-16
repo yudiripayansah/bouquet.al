@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Portfolio Category List shortcode style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-category-list-holder {
+    @include mkdfRelativeHolderLayout();
+
+	/***** Article Global Style - begin *****/
+
+    article {
+	    @include mkdfRelativeHolderLayout();
+        box-sizing: border-box;
+
+	    .touch & {
+		    cursor: pointer;
+	    }
+	
+	    &:hover {
+		
+		    .mkdf-pcli-text-holder {
+			    opacity: 1;
+		    }
+	    }
+
+	    .mkdf-pcl-item-inner {
+		    @include mkdfRelativeHolderLayout();
+		    overflow: hidden;
+	    }
+	    
+	    .mkdf-pcli-image {
+		    @include mkdfRelativeHolderLayout();
+		    
+		    img {
+			    display: block;
+			    width: 100%;
+		    }
+	    }
+	
+	    .mkdf-pcli-text-holder {
+		    @include mkdfAbsoluteHolderLayout();
+		    padding: 20px;
+		    background-color: rgba($default-heading-color, .6);
+		    opacity: 0;
+		    text-align: center;
+		    box-sizing: border-box;
+		    @include mkdfTransition(opacity .2s ease-in-out);
+	    }
+
+	    .mkdf-pcli-text-wrapper {
+	        @include mkdfTableLayout();
+	    }
+
+	    .mkdf-pcli-text {
+		    @include mkdfTableCellLayout();
+	    }
+	
+	    .mkdf-pcli-title {
+		    margin: 0;
+		    color: #fff;
+	    }
+	    
+	    .mkdf-pcli-excerpt {
+		    margin: 3px 0 0;
+		    color: #fff;
+	    }
+	
+	    .mkdf-pcli-link {
+		    @include mkdfAbsoluteHolderLayout();
+	    }
+    }
+
+	/***** Article Global Style - end *****/
+	
+	&:not(.mkdf-pcl-one-column) {
+		
+		article {
+			float: left;
+		}
+	}
+	
+	$gallery_columns_number: ('two', 'three', 'four', 'five');
+	
+	@for $i from 0 to length($gallery_columns_number) {
+		&.mkdf-pcl-#{nth($gallery_columns_number,$i+1)}-columns {
+			
+			article {
+				width: 100% / ($i+2);
+			}
+
+			@if ($i > 2) { // set different break point for five columns
+				@media only screen and (min-width: $laptop-landscape-mac-plus-pixel) {
+
+					article {
+
+						&:nth-child(#{$i+2}n+1) {
+							clear: both;
+						}
+					}
+				}
+			} @else if ($i == 2) { // set different break point for four columns
+				@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+					article {
+
+						&:nth-child(#{$i+2}n+1) {
+							clear: both;
+						}
+					}
+				}
+			} @else {
+				@media only screen and (min-width: $ipad-portrait-plus-pixel) {
+
+					article {
+
+						&:nth-child(#{$i+2}n+1) {
+							clear: both;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Portfolio Category List shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Button shortcode responsive style - begin
+   ========================================================================== */
+
+@media only screen and (max-width: $laptop-landscape) {
+
+	.mkdf-btn {
+
+		&.mkdf-btn-large,
+		&.mkdf-btn-huge {
+			@include mkdfButtonMediumParams();
+		}
+	}
+}
+@include ipad-landscape {
+	.mkdf-pl-holder {
+		.button {
+			padding: 13px 25px;
+		}
+	}
+}
+/* ==========================================================================
+   Button shortcode responsive style - end
+   ========================================================================== */

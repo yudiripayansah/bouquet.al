@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Team shortcode style - begin
+   ========================================================================== */
+
+.mkdf-team-holder {
+    @include mkdfRelativeHolderLayout();
+	
+	&.mkdf-team-info-on-image {
+		.touch & {
+			cursor: pointer;
+		}
+
+		&:hover {
+			
+			.mkdf-team-social-wrapper {
+				opacity: 1;
+			}
+
+			.mkdf-team-social-inner {
+				@include mkdfTransitionTransform(.45s cubic-bezier(0.64, 0.01, 0.15, 1.16), opacity .5s);
+				@include mkdfTransform(translate3d(0,0,0));
+				text-align: center;
+			}
+		}
+		.mkdf-team-position{
+			color: $default-heading-color;
+		}
+		.mkdf-team-social-holder {
+			margin: 7px 0 0;
+		}
+
+		.mkdf-team-text{
+			color: $default-heading-color;
+		}
+	}
+
+    .mkdf-team-image {
+        @include mkdfRelativeHolderLayout();
+
+        img {
+            display: block;
+			margin: 0 auto;
+        }
+    }
+	.mkdf-team-title-holder{
+		text-align: center;
+	}
+	.mkdf-team-info {
+		@include mkdfRelativeHolderLayout();
+		box-sizing: border-box;
+		margin: 18px 0 0;
+		text-align: center;
+	}
+
+    .mkdf-team-name {
+    	color: #1b1b1b;
+        margin: 0;
+    }
+    .mkdf-team-text {
+		color: $meta-color;
+		margin: 0;
+    }
+    .mkdf-team-position {
+		display: block;
+		font-size: 12px;
+		color: $meta-color;
+        margin: 2px 0 4px;
+    }
+	
+	.mkdf-team-social-wrapper {
+		@include mkdfAbsoluteHolderLayout();
+		background-color: rgba(#fff, .9);
+		text-align: center;
+		opacity: 0;
+		@include mkdfTransform(translateZ(0));
+		@include mkdfTransition(opacity .3s);
+		z-index: 1;
+	}
+	
+	.mkdf-team-social-outer {
+		@include mkdfTableLayout();
+	}
+	
+	.mkdf-team-social-inner {
+		position: relative;
+		display: table-cell;
+		height: 100%;
+		width: 100%;
+		padding: 20px 40px 0px;
+		vertical-align: middle;
+		@include mkdfTransitionTransform(.2s ease);
+		@include mkdfTransform(translate3d(0,40px,0));
+	}
+	
+	.mkdf-team-social-holder {
+		@include mkdfRelativeHolderLayout();
+		margin: 9px 0 0;
+		
+		.mkdf-team-icon {
+			font-size: 14px;
+			color: $default-heading-color;
+			margin: 0 27px 0 0;
+
+			&:last-child{
+				margin-right: 0;
+			}
+
+			.mkdf-icon-element {
+				font-size: inherit;
+				@include mkdfTransition(none);
+				&:hover {
+					color: $first-main-color;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Team shortcode style - end
+   ========================================================================== */

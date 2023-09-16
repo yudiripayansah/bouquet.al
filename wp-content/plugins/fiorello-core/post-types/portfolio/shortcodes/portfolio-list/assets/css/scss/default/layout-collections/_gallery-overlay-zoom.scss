@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay with Zoom style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-list-holder {
+	
+	&.mkdf-pl-gallery-overlay-zoom {
+		
+		&.mkdf-pl-has-shadow {
+			
+			.mkdf-pl-item-inner {
+				box-shadow: $default-box-shadow;
+			}
+		}
+		
+		article {
+			
+			&:hover {
+
+				.mkdf-pli-image{
+
+					img{
+						@include mkdfTransform(scale(1.04) translateZ(0));
+					}
+				}
+				
+				.mkdf-pli-text-holder {
+					opacity: 1;
+				}
+			}
+			
+			.mkdf-pl-item-inner {
+				overflow: hidden;
+			}
+			
+			.mkdf-pli-image{
+				overflow: hidden;
+				-webkit-backface-visibility: hidden;
+
+				img{
+					@include mkdfTransform(scale(1));
+					@include mkdfTransitionTransform($default-easing-function $default-transition-duration);
+				}
+			}
+
+			.mkdf-pli-text {
+				
+				.mkdf-pli-title,
+				.mkdf-pli-excerpt {
+					color: #fff;
+				}
+				
+				.mkdf-pli-category-holder {
+					
+					a {
+						color: #fff;
+						
+						&:hover {
+							color: $first-main-color;
+						}
+					}
+				}
+			}
+		}
+		
+		.mkdf-pli-text-holder {
+			@include mkdfAbsoluteHolderLayout();
+			padding: 20px;
+			background-color: rgba($default-heading-color, 0.4);
+			opacity: 0;
+			text-align: center;
+			box-sizing: border-box;
+			@include mkdfTransition(opacity .2s ease-in-out);
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay with Zoom style - end
+   ========================================================================== */

@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Portfolio Item Layout - Standard Zoom and Shader style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-list-holder {
+	
+	&.mkdf-pl-standard-zoom-shader {
+		
+		article {
+			
+			&:hover {
+				
+				.mkdf-pli-image {
+					
+					img{
+						@include mkdfTransform(scale(1.03) translateZ(0));
+					}
+					
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+			
+			.mkdf-pli-image {
+				overflow: hidden;
+				-webkit-backface-visibility: hidden;
+				
+				img{
+					@include mkdfTransform(scale(1));
+					@include mkdfTransitionTransform($default-transition-duration $default-easing-function);
+				}
+				
+				&:after {
+					@include mkdfImageOverlayHoverStyle(false);
+					z-index: 1;
+				}
+			}
+			
+			.mkdf-pli-link {
+				z-index: 2;
+			}
+		}
+		
+		.mkdf-pli-text-holder {
+			@include mkdfRelativeHolderLayout();
+			margin: 35px 0 0;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Standard Zoom and Shader style - end
+   ========================================================================== */

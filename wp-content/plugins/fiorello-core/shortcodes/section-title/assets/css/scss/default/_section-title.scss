@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Section Title shortcode styles - begin
+   ========================================================================== */
+
+.mkdf-section-title-holder {
+    @include mkdfRelativeHolderLayout();
+	box-sizing: border-box;
+
+    .mkdf-st-title {
+	    display: block;
+        margin: 0 0 19px;
+	    
+	    .mkdf-st-title-bold {
+		    font-weight: 700;
+	    }
+	    
+	    .mkdf-st-title-highlight {
+            color: $first-main-color;
+	    }
+    }
+
+	&.mkdf-st-subtitle-pos-under {
+		.mkdf-st-subtitle {
+			font-family: $default-text-font;
+			font-size: 17px;
+			color: $default-text-color;
+			margin: 5px 0 0;
+		}
+	}
+
+	&.mkdf-st-subtitle-pos-above {
+		.mkdf-st-subtitle {
+			margin: 0 0 5px;
+		}
+	}
+    
+    .mkdf-st-text {
+	    display: block;
+        margin: 14px 0 0;
+    }
+}
+/* ==========================================================================
+   Section Title shortcode styles - end
+   ========================================================================== */
+
+
